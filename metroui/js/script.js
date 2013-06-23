@@ -36,23 +36,37 @@ error:function(){},success:function(b){k(function(){a.widget_page_data[d]=b;e(b)
 // +----------------------------------------+
 */
 $(document).ready(function() {
-    var colour_array = ['blue', 'orange', 'red', 'green', 'darkgreen', 'purple', 'darkred', 'darkblue', 'yellow', 'grey'];
+    var colour_array = ['blue', 'orange', 'red', 'green'];
+    // , 'darkgreen', 'purple', 'darkred', 'darkblue', 'yellow', 'grey'
 
     var header_html = '';
-    header_html += '<div id="settings"></div>';
+    header_html += '<div id="settings"></div><div id="systemControl"><a href="#" class="btn"><i class="icon-resize-small"></i></a><a href="#" class="btn"><i class="icon-off"></i></a></div>';
     header_html += '<div id="theme_picker">';
-    header_html +=     '<span>Theme:</span>';
-    header_html +=     '<div class="selected">';
+    header_html +=     '<h4>皮肤:</h4>';
+    header_html +=     '<div class="theme selected">';
     header_html +=         '<div class="square default"></div>';
     header_html +=         '<label class="text_shadow">custom</label>';
     header_html +=      '</div>';
 
     $(colour_array).each(function(index, colour) {
-        header_html += '<div>';
+        header_html += '<div class="theme">';
         header_html +=     '<div class="square ' + colour + '"></div>';
         header_html +=     '<label class="text_shadow">' + colour + '</label>';
         header_html += '</div>';
     });
+    header_html +=     '<h4>管理应用:</h4>';
+    header_html +=     '<div class="add_apps">';
+    header_html +=         '<a href="#" class="btn"><i class="icon-plus"></i>添加官方应用</a><a href="#" class="btn"><i class="icon-plus"></i>添加自定义应用</a>';
+    header_html +=      '</div>';
+    header_html +=     '<h4>正在运行:</h4>';
+    header_html +=     '<ul class="apps">';
+    header_html +=         '<li style="background-image:url(img/logo.png);background-size:cover;"></li>';
+    header_html +=         '<li style="background-image:url(img/widget_royal_preloader.png);"></li>';
+    header_html +=         '<li style="background-image:url(img/widget_contact.png);background-size:cover;"></li>';
+    header_html +=         '<li style="background-image:url(img/widget_blog.png);"></li>';
+    header_html +=         '<li style="background-image:url(img/widget_gallery.png);background-size:cover;"></li>';
+    header_html +=         '<li style="background-image:url(img/widget_editable.png);"></li>';
+    header_html +=      '</ul>';
 
     header_html += '</div>';
 

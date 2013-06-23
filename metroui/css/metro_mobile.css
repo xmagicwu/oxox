@@ -23,25 +23,16 @@ div.widget {
     height: auto !important;
     margin: 4px;
     -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-        -ms-box-shadow: none;
-         -o-box-shadow: none;
             box-shadow: none;
 }
 div.widget:hover {
     border: none;
     -webkit-transform: scale(1) !important;
-       -moz-transform: scale(1) !important;
-        -ms-transform: scale(1) !important;
-         -o-transform: scale(1) !important;
             transform: scale(1) !important;
 }
 div.widget.unloaded {
     opacity: 0;
     -webkit-transform: rotateY(0deg);
-       -moz-transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
-         -o-transform: rotateY(0deg);
             transform: rotateY(0deg);
 }
 div.widget:last-child {
